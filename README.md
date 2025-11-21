@@ -15,6 +15,7 @@ The ALU will take in two 32-bit values and a control line. An Arithmetic unit do
 <img width="668" height="344" alt="image" src="https://github.com/user-attachments/assets/1195efe3-e2dd-443c-8bf0-be1579c06533" />
 
 #### Fig 1: Block Diagram of 32 Bit ALU
+![WhatsApp Image 2025-11-18 at 11 52 37_333e9f85](https://github.com/user-attachments/assets/cc4779af-e727-4310-9f1e-32c9bd140f66)
 
 ## Creating a Workspace:
 
@@ -56,8 +57,10 @@ source /cadence/install/cshrc (mention the path of the tools)
 (The path of cshrc could vary depending on the installation destination)
 
 After this, you can see the window like below
+![WhatsApp Image 2025-11-18 at 11 52 38_f8dce3fa](https://github.com/user-attachments/assets/c131d080-481c-4da3-ba79-8a688a55e750)
 
 #### Fig 2: Invoke the Cadence Environment
+![WhatsApp Image 2025-11-18 at 11 52 37_a3f06886](https://github.com/user-attachments/assets/e7f8cea6-23ad-4d41-b88c-fea6b0049e24)
 
 To Launch the Simulation tool
 
@@ -70,6 +73,8 @@ or
 It will invoke the nclaunch window for functional simulation. We can compile, elaborate and simulate it using Multiple Steps.
 
 #### Fig 3: Setting Multi-step simulation
+![WhatsApp Image 2025-11-18 at 11 52 38_c0e03bed](https://github.com/user-attachments/assets/0db10e37-c3a4-4887-ae70-a6d680442e4c)
+
 
 Select Multiple Step and then select “Create cds.lib File” as shown in the figure below
 
@@ -94,6 +99,7 @@ Worklib is the directory where all the compiled codes are stored, while Snapshot
 To perform the function simulation, the following three steps are involved: Compilation, Elaboration and Simulation.
 
 #### Fig 6: Nclaunch Window
+![WhatsApp Image 2025-11-18 at 11 52 38_6d8c01d1](https://github.com/user-attachments/assets/5e3a7216-a920-4fa2-a65d-a917f9a7f125)
 
 ### Step 1: Compilation:
 – Process to check the correct Verilog language syntax and usage
@@ -113,6 +119,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile filename.v
 
 Left side select the file and in Tools: launch verilog compiler with current selection will get enable. Click it to compile the code
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
+![WhatsApp Image 2025-11-18 at 11 52 38_02887285](https://github.com/user-attachments/assets/aeeebf26-621c-4b68-9dca-17fa0bec9c27)
 
 #### Fig 7: Compiled database in WorkLib
 After compilation, it will come under worklib. You can see on the right side window
@@ -142,6 +149,7 @@ Outputs: Elaborate database updated in the mapped library if successful, generat
 5.It also establishes net connectivity and prepares all of this for simulation
 
 After elaboration, the file will come under snapshot. Select the test bench and simulate it.
+![WhatsApp Image 2025-11-18 at 11 52 38_34bab58d](https://github.com/user-attachments/assets/54fc7c99-7769-46ee-a914-d505ed6f4645)
 
 #### Fig 8: Elaboration Launch Option
 
@@ -157,8 +165,10 @@ Simulations allow dumping design and test bench signals into a waveform
 Steps for simulation – Run the simulation command with simulator options
 
 #### Fig 9: Design Browser window for simulation
+![WhatsApp Image 2025-11-18 at 11 53 21_0171846a](https://github.com/user-attachments/assets/1be1ad85-05d9-40ce-ad82-2036a60b7aaa)
 
 #### Fig 10: Simulation Waveform Window
+![WhatsApp Image 2025-11-18 at 11 53 21_48fbec47](https://github.com/user-attachments/assets/1e3da233-5bb5-427d-8561-52012dd1bb65)
 
 Synthesis requires three files as follows,
 
@@ -174,12 +184,17 @@ The Liberty files are present in the library path,
 • The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
 
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist. Or use source run.tcl command in the terminal window to view the netlist, and a log file will be created in the working folder.
+<img width="1265" height="657" alt="image" src="https://github.com/user-attachments/assets/e0a4bc3a-fdd6-4b18-9279-87b69a062b52" />
 
-#### Fig 11: Synthesis RTL Schematic 
 
 #### Fig 12: Area report
 
+<img width="1245" height="602" alt="Screenshot 2025-11-18 184807" src="https://github.com/user-attachments/assets/6c86822e-676e-4f3c-a6fd-9e18c66bbb0a" />
+
 #### Fig 13: Power Report
+
+<img width="1267" height="408" alt="Screenshot 2025-11-18 184824" src="https://github.com/user-attachments/assets/46fd91e6-92a6-4acd-b3af-ae7566e2160b" />
+
 
 ## Result
 The functionality of the 32-bit ALU was successfully verified using a test bench and simulated with the nclaunch tool. Additionally, the generic netlist of the 32-bit ALU was generated, and the corresponding area and power reports were analyzed and tabulated using Cadence Genus.
